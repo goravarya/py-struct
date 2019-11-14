@@ -8,7 +8,7 @@ beforeEach(function () {
     return helpers.run(path.join(__dirname, "../app"))
 });
 
-describe("python-bones:app", function () {
+describe("py-struct:app", function () {
     it("builds files", function () {
         assert.file([
             "LICENSE",

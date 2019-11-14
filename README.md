@@ -1,17 +1,17 @@
 # Py-struct
 
 [![Project Status](http://www.repostatus.org/badges/latest/inactive.svg)](http://www.repostatus.org/#inactive)
-[![travis](https://travis-ci.org/dirmeier/python-bones.svg?branch=master)](https://travis-ci.org/cristian-rincon/py-struct)
+[![travis](https://travis-ci.org/cristian-rincon/py-struct.svg?branch=master)](https://travis-ci.org/cristian-rincon/py-struct)
 [![appveyor](https://ci.appveyor.com/api/projects/status/6kpnkmlva9hio2hc?svg=true)](https://ci.appveyor.com/project/cristian-rincon/py-struct)
-[![codecov](https://codecov.io/gh/dirmeier/python-bones/branch/master/graph/badge.svg)](https://codecov.io/gh/cristian-rincon/py-struct)
+[![codecov](https://codecov.io/gh/cristian-rincon/py-struct/branch/master/graph/badge.svg)](https://codecov.io/gh/cristian-rincon/py-struct)
 [![npm version](https://badge.fury.io/js/generator-python-bones.svg)](https://www.npmjs.com/package/generator-py-struct)
-[![npm download](https://img.shields.io/npm/dt/generator-python-bones.svg)](https://www.npmjs.com/package/generator-py-struct)
+[![npm download](https://img.shields.io/npm/dt/generator-py-struct.svg)](https://www.npmjs.com/package/generator-py-struct)
 
 
 
 ## Introduction
 
-`python-bones` is a yeoman-generator for `Python`-projects using `setuptools`. Projects created with `python-bones` are ready for publication to `pypi` and `conda`. The generator creates a package barebone that support:
+`py-struct` is a yeoman-generator for `Python`-projects using `setuptools`. Projects created with `py-struct` are ready for publication to `pypi` and `conda`. The generator creates a package barebone that support:
 
 * a standard `setup.py`, `setup.cfg`, `MANIFEST.in`,
 * project automationg `tox`,
@@ -70,19 +70,19 @@ Yeoman comes with [```npm```](https://nodejs.org/en/download/current/), so insta
 
 ```sh
   npm install -g yo
-  npm install -g generator-python-bones
+  npm install -g generator-py-struct
 ```
 
 Once you have the package, you can create a scaffold using:
 
 ```sh
-  yo python-bones
+  yo py-struct
 ```
 
 This builds the skeleton. Afterwards modify the sources and documentation and build both using:
 
 ```sh
-  pip install -e .
+  pipenv install && pipenv install --dev .
   cd docs && make html
 ```
 
