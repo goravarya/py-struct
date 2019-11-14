@@ -10,6 +10,6 @@
 
 ### v0.0.1
 
-* Init for `python-bones`
+* Init for `py-struct`
 * CI, .etc.
 * npm
