@@ -70,7 +70,7 @@ Yeoman comes with [```npm```](https://nodejs.org/en/download/current/), so insta
 
 ```sh
   npm install -g yo
-  npm install -g generator-py-struct
+  npm install -g generator-@cristian-rincon/py-struct
 ```
 
 Once you have the package, you can create a scaffold using:
