@@ -1,0 +1,34 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+requests = "*"
+gcsfs = "*"
+fs-gcsfs = "*"
+validators = "*"
+google-api-python-client = "*"
+google-auth = "*"
+google-auth-httplib2 = "*"
+Sphinx = "*"
+sphinx-rtd-theme = "*"
+fs = "*"
+tqdm = "*"
+pylint = "*"
+docformatter = "*"
+pipenv-to-requirements = "*"
+nest-asyncio = "*"
+
+[dev-packages]
+pytest = "*"
+coverage = "*"
+autopep8 = "*"
+pytest-cov = "*"
+pep8 = "*"
+
+[requires]
+python_version = "3.7"
+
+[scripts]
+version = "python --version"
