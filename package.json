@@ -1,6 +1,6 @@
 {
-  "name": "generator-python-struct",
-  "version": "0.0.0",
+  "name": "@cristian-rincon/py-struct",
+  "version": "0.0.1",
   "description": "Yeoman generator for python project",
   "homepage": "https://github.com/cristian-rincon/py-struct.git",
   "keywords": [
@@ -9,11 +9,7 @@
     "python",
     "pypi"
   ],
-  "author": {
-    "name": "cristian-rincon",
-    "email": "cristian.o.rincon.b@gmail.com",
-    "url": "https://github.com/cristian-rincon"
-  },
+  "author": "cristian-rincon <cristian.o.rincon.b@gmail.com> (https://github.com/cristian-rincon)",
   "scripts": {
     "test": "istanbul cover node_modules/mocha/bin/_mocha"
   },
@@ -29,7 +25,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cristian-rincon/py-struct.git"
+    "url": "git+https://github.com/cristian-rincon/py-struct.git"
   },
   "devDependencies": {
     "codecov": "^2.1.0",
@@ -39,5 +35,12 @@
     "mocha": "^3.2.0",
     "yeoman-assert": "^3.0.0",
     "yeoman-test": "^1.6.0"
+  },
+  "bugs": {
+    "url": "https://github.com/cristian-rincon/py-struct/issues"
+  },
+  "main": "index.js",
+  "directories": {
+    "test": "test"
   }
 }

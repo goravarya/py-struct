@@ -5,7 +5,7 @@
 [![appveyor](https://ci.appveyor.com/api/projects/status/6kpnkmlva9hio2hc?svg=true)](https://ci.appveyor.com/project/cristian-rincon/py-struct)
 [![codecov](https://codecov.io/gh/cristian-rincon/py-struct/branch/master/graph/badge.svg)](https://codecov.io/gh/cristian-rincon/py-struct)
 [![npm version](https://badge.fury.io/js/generator-python-bones.svg)](https://www.npmjs.com/package/generator-py-struct)
-[![npm download](https://img.shields.io/npm/dt/generator-py-struct.svg)](https://www.npmjs.com/package/generator-py-struct)
+[![npm download](https://img.shields.io/npm/dt/@cristian-rincon/py-struct.svg)](https://www.npmjs.com/package/@cristian-rincon/py-struct)
 
 
 
