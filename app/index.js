@@ -108,7 +108,7 @@ module.exports = class extends Generator {
 
         var cops = [
             "bld.dat", "build.sh", "install.sh",
-            "LICENSE", "MANIFEST.in", "requirements.txt",
+            "LICENSE", "MANIFEST.in", "Pipfile",
             "setup.cfg", "test.sh", "tox.ini"
         ];
 
