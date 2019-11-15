@@ -1,6 +1,6 @@
 # Py-struct
 
-[![Project Status](http://www.repostatus.org/badges/latest/inactive.svg)](http://www.repostatus.org/#inactive)
+[![Project Status](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#inactive)
 [![travis](https://travis-ci.org/cristian-rincon/py-struct.svg?branch=master)](https://travis-ci.org/cristian-rincon/py-struct)
 [![appveyor](https://ci.appveyor.com/api/projects/status/6kpnkmlva9hio2hc?svg=true)](https://ci.appveyor.com/project/cristian-rincon/py-struct)
 [![codecov](https://codecov.io/gh/cristian-rincon/py-struct/branch/master/graph/badge.svg)](https://codecov.io/gh/cristian-rincon/py-struct)
@@ -27,38 +27,41 @@
 The resulting folder-structure looks like this:
 
 ```sh
-  ├── bandit.yml
-  ├── bld.dat
-  ├── build.sh
-  ├── codecov.yml
-  ├── coveragerc
-  ├── docs
-  │   ├── Makefile
-  │   └── source
-  │       ├── conf.py
-  │       ├── examples.rst
-  │       ├── index.rst
-  │       ├── modules.rst
-  │       └── tutorial.rst
-  ├── emptyproject.py
-  ├── gitattributes
-  ├── gitignore
-  ├── __init__.py
-  ├── install.sh
-  ├── LICENSE
-  ├── MANIFEST.in
-  ├── meta.yaml
-  ├── Pipfile
-  ├── pylintrc
-  ├── README.rst
-  ├── setup.cfg
-  ├── setup.py
-  ├── test.py
-  ├── test.sh
-  ├── TODO.md
-  ├── tox.ini
-  ├── travis.yml
-  └── VERSIONS.md
+    .
+    ├── bandit.yml
+    ├── bld.dat
+    ├── build.sh
+    ├── codecov.yml
+    ├── coveragerc
+    ├── credentials.json
+    ├── docs
+    │   ├── Makefile
+    │   └── source
+    │       ├── conf.py
+    │       ├── examples.rst
+    │       ├── index.rst
+    │       ├── modules.rst
+    │       └── tutorial.rst
+    ├── emptyproject.py
+    ├── gitattributes
+    ├── gitignore
+    ├── __init__.py
+    ├── install.sh
+    ├── LICENSE
+    ├── MANIFEST.in
+    ├── meta.yaml
+    ├── Pipfile
+    ├── pylintrc
+    ├── README.rst
+    ├── setup.cfg
+    ├── setup.py
+    ├── test.py
+    ├── test.sh
+    ├── TODO.md
+    ├── tox.ini
+    ├── travis.yml
+    └── VERSIONS.md
+
 ```
 
 ## Installation
