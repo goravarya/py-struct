@@ -19,7 +19,7 @@ describe("py-struct:app", function () {
             ".gitignore", ".gitattributes",
             ".travis.yml", ".codecov.yml", ".coveragerc", ".pylintrc",
             "bld.dat", "build.sh", "install.sh",
-            "build.sh", "emptyproject", "meta.yaml", "requirements.txt",
+            "build.sh", "emptyproject", "meta.yaml", "Pipfile",
             "setup.py", "setup.cfg",
             "test.sh", "tests/test_me.py",
             "docs/Makefile", "docs/source/conf.py", "docs/source/examples.rst",
