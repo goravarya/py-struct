@@ -25,7 +25,7 @@ describe("py-struct:app", function () {
             "docs/Makefile", "docs/source/conf.py", "docs/source/examples.rst",
             "docs/source/index.rst", "docs/source/modules.rst", "docs/source/tutorial.rst",
             "emptyproject/__init__.py", "emptyproject/emptyproject.py",
-            ".bandit.yml", "tox.ini"
+            ".bandit.yml", "tox.ini","credentials.json"
         ]);
     });
 });

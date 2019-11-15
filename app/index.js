@@ -18,12 +18,12 @@ module.exports = class extends Generator {
         return this.prompt([{
             type: "input",
             name: "user",
-            message: "What\'s your name",
+            message: "¿What\'s your name",
             default: "user"
         }, {
             type: "input",
             name: "email",
-            message: "What\'s your email adress?",
+            message: "¿What\'s your email adress?",
             default: "user@noreply.com",
             validate: function (input) {
                 return validator.isEmail(input);
@@ -31,19 +31,26 @@ module.exports = class extends Generator {
         }, {
             type: "input",
             name: "projectID",
-            message: "What\'s the name of your package?",
+            message: "¿What\'s the name of your package?",
             default: "emptyproject"
         }, {
             type: "input",
             name: "desc",
-            message: "How would you describe the project in a single sentence?",
+            message: "¿How would you describe the project in a single sentence?",
             default: "description"
         }, {
             type: "input",
             name: "githubuser",
-            message: "What\'s your github user name?",
+            message: "¿What\'s your github user name?",
             default: "githubuser"
-        }]).then((answers) => {
+        }, {
+            type: "input",
+            name: "credentials",
+            message: "¿Where\'s your credential path?",
+            default: "credentials.json" 
+
+        }
+        ]).then((answers) => {
             this.args = answers;
             this.config.set(this.args);
         });
@@ -89,6 +96,12 @@ module.exports = class extends Generator {
                 desc: this.args.desc,
                 email: this.args.email,
                 user: this.args.user
+            });
+        /* Copy credentials.json */
+        this.fs.copyTpl(
+            this.templatePath(this.args.credentials),
+            this.destinationPath("auth/credentials.json"),{
+                projectID: this.args.projectID, 
             });
 
         var els = ["README.rst", "meta.yaml", "setup.py", "TODO.md", "VERSIONS.md"]
