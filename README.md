@@ -27,41 +27,38 @@
 The resulting folder-structure looks like this:
 
 ```sh
-   |____.bandit.yml
-   |____.codecov.yml
-   |____.coveragerc
-   |____.gitattributes
-   |____.gitignore
-   |____.pylintrc
-   |____.travis.yml
-   |____.yo-rc.json
-   |____LICENSE
-   |____MANIFEST.in
-   |____README.rst
-   |____TODO.md
-   |____VERSIONS.md
-   |____bld.dat
-   |____build.sh
-   |____docs
-   | |____Makefile
-   | |____source
-   | | |____conf.py
-   | | |____index.rst
-   | | |____examples.rst
-   | | |____modules.rst
-   | | |____tutorial.rst
-   |____emptyproject
-   | |______init__.py
-   |____install.sh
-   |____meta.yaml
-   |____requirements.txt
-   |____setup.cfg
-   |____setup.py
-   |____tests
-   | |____test_me.py
-   | |____emptyproject.py
-   |____test.sh
-   |____tox.ini
+  ├── bandit.yml
+  ├── bld.dat
+  ├── build.sh
+  ├── codecov.yml
+  ├── coveragerc
+  ├── docs
+  │   ├── Makefile
+  │   └── source
+  │       ├── conf.py
+  │       ├── examples.rst
+  │       ├── index.rst
+  │       ├── modules.rst
+  │       └── tutorial.rst
+  ├── emptyproject.py
+  ├── gitattributes
+  ├── gitignore
+  ├── __init__.py
+  ├── install.sh
+  ├── LICENSE
+  ├── MANIFEST.in
+  ├── meta.yaml
+  ├── Pipfile
+  ├── pylintrc
+  ├── README.rst
+  ├── setup.cfg
+  ├── setup.py
+  ├── test.py
+  ├── test.sh
+  ├── TODO.md
+  ├── tox.ini
+  ├── travis.yml
+  └── VERSIONS.md
 ```
 
 ## Installation
