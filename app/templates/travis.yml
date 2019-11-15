@@ -8,13 +8,13 @@ python:
   - "3.5"
 
 install:
-  - pip install -r requirements.txt
-  - pip install -e .
-  - pip install codecov
-  - pip install pytest-cov
+  - pipenv install 
+  - pipenv install --dev
+  - pipenv install codecov
+  - pipenv install pytest-cov
 
 script: 
-  - py.test --cov=./
+  - pytest --cov=./
 
 after_success:
   - codecov
