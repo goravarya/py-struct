@@ -13,19 +13,18 @@ describe("py-struct:app", function () {
         assert.file([
             "LICENSE",
             "README.rst",
-            "TODO.md",
             "VERSIONS.md",
             "MANIFEST.in",
             ".gitignore", ".gitattributes",
-            ".travis.yml", ".codecov.yml", ".coveragerc", ".pylintrc",
-            "bld.dat", "build.sh", "install.sh",
-            "build.sh", "emptyproject", "meta.yaml", "Pipfile",
-            "setup.py", "setup.cfg",
+            ".pylintrc",
+            "build.sh", "install.sh",
+            "build.sh", "emptyproject","Pipfile",
+            "setup.py",
             "test.sh", "tests/test_me.py",
             "docs/Makefile", "docs/source/conf.py", "docs/source/examples.rst",
             "docs/source/index.rst", "docs/source/modules.rst", "docs/source/tutorial.rst",
             "emptyproject/__init__.py", "emptyproject/emptyproject.py",
-            ".bandit.yml", "tox.ini"
+             "tox.ini"
         ]);
     });
 });

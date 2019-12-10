@@ -13,25 +13,22 @@
 
 `py-struct` is a yeoman-generator for `Python` projects using `setuptools`. Projects created with `py-struct` are ready for publication to `pypi` and `conda`. The generator creates a package barebone that support:
 
-* a standard `setup.py`, `setup.cfg`, `MANIFEST.in`,
+* a standard `setup.py`, `MANIFEST.in`,
 * project automationg `tox`,
-* static code analysis and reports using `pylint`, `flake8` and `bandit`,
+* static code analysis and reports using `pylint`, `flake8`
 * a unit-test suite using `pytest/unittest`,
-* `build.sh`, `bld.dat` and `meta.yaml` for `conda` packages,
+* `build.sh`, `bld.dat` for `conda` packages,
 * documentation with `readthedocs.io` and `sphinx`,
-* badges for the *project status*, *build status* using Travis CI and *code coverage* using Codecov,
-* custom README.md, TODO.md and VERSIONS.md files,
-* `.gitignore`, `.gitattributes`, `.travis.yml`, `coveragerc`,
+* custom README.md, and VERSIONS.md files,
+* `.gitignore`, `.gitattributes`, `coveragerc`,
 * a GPL3 license.
 
 The resulting folder-structure looks like this:
 
 ```sh
     .
-    ├── bandit.yml
     ├── bld.dat
     ├── build.sh
-    ├── codecov.yml
     ├── coveragerc
     ├── credentials.json
     ├── docs
@@ -49,7 +46,6 @@ The resulting folder-structure looks like this:
     ├── install.sh
     ├── LICENSE
     ├── MANIFEST.in
-    ├── meta.yaml
     ├── Pipfile
     ├── pylintrc
     ├── README.rst

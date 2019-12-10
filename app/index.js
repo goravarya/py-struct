@@ -104,7 +104,7 @@ module.exports = class extends Generator {
                 projectID: this.args.projectID, 
             });
 
-        var els = ["README.rst", "meta.yaml", "setup.py", "TODO.md", "VERSIONS.md"]
+        var els = ["README.rst","setup.py","VERSIONS.md"]
         for (i in els)
         {
           this.fs.copyTpl(
@@ -120,9 +120,9 @@ module.exports = class extends Generator {
 
 
         var cops = [
-            "bld.dat", "build.sh", "install.sh",
+            "build.sh", "install.sh",
             "LICENSE", "MANIFEST.in", "Pipfile",
-            "setup.cfg", "test.sh", "tox.ini"
+            "test.sh", "tox.ini"
         ];
 
         for (var i in cops)
@@ -133,8 +133,8 @@ module.exports = class extends Generator {
         }
 
         var hcops = [
-            "codecov.yml", "coveragerc", "gitignore",
-            "gitattributes", "pylintrc", "travis.yml", "bandit.yml"
+            "gitignore",
+            "gitattributes", "pylintrc"
         ];
 
         for (var i in hcops)
