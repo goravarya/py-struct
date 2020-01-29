@@ -11,7 +11,7 @@ module.exports = class extends Generator {
     prompting() {
 
         this.log(yosay(
-            "Welcome to " + superb() + " python-struct!\n" +
+            "¡Welcome to " + superb() + " python-struct!\n" +
             "I'll walk you through the installation."
         ));
 
