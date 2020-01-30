@@ -17,14 +17,13 @@ describe("py-struct:app", function () {
             "MANIFEST.in",
             ".gitignore", ".gitattributes",
             ".pylintrc",
-            "build.sh", "install.sh",
-            "build.sh", "emptyproject","Pipfile",
+            "build.sh", "prepare_environment.sh",
+            "emptyproject",
             "setup.py",
-            "test.sh", "tests/test_me.py",
+            "run_test.sh", "test/test_emptyproject.py",
             "docs/Makefile", "docs/source/conf.py", "docs/source/examples.rst",
             "docs/source/index.rst", "docs/source/modules.rst", "docs/source/tutorial.rst",
             "emptyproject/__init__.py", "emptyproject/emptyproject.py",
-             "tox.ini"
         ]);
     });
 });

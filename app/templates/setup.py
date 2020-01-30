@@ -6,14 +6,13 @@ def readme():
 
 setup(
     name='<%= projectID %>',
-    version='0.0.1',
+    version='1.0.0',
     description='<%= desc %>',
     long_description=readme(),
-    url='https://github.com/<%= githubuser %>/<%= projectID %>',
-    download_url='https://github.com/<%= githubuser %>/<%= projectID %>/tarball/0.0.1',
+    url='https://github.com/<%= gituser %>/<%= projectID %>',
+    download_url='https://github.com/<%= gituser %>/<%= projectID %>/tarball/1.0.0',
     author='<%= user %>',
     author_email='<%= email %>',
-    license='GPLv3',
     keywords=['?'],
     packages=['<%= projectID %>'],
     install_requires=[
@@ -28,7 +27,6 @@ setup(
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.1',
         'Programming Language :: Python :: 3.2',

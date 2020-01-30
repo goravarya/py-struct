@@ -40,9 +40,9 @@ module.exports = class extends Generator {
             default: "description"
         }, {
             type: "input",
-            name: "githubuser",
-            message: "¿What\'s your github user name?",
-            default: "githubuser"
+            name: "gituser",
+            message: "¿What\'s your gitlab user name?",
+            default: "gituser"
         }, {
             type: "input",
             name: "credentials",
@@ -76,7 +76,7 @@ module.exports = class extends Generator {
                 });
         }
 
-        var fls = ["__init__.py", "emptyproject.py"]
+        var fls = ["__init__.py", `${this.args.projectID}.py`]
         for (var i in fls)
         {
             this.fs.copyTpl(
@@ -91,7 +91,7 @@ module.exports = class extends Generator {
 
         this.fs.copyTpl(
             this.templatePath("test.py"),
-            this.destinationPath("tests/test_me.py"), {
+            this.destinationPath(`test/test_${this.args.projectID}.py`), {
                 projectID: this.args.projectID,
                 desc: this.args.desc,
                 email: this.args.email,
@@ -111,7 +111,7 @@ module.exports = class extends Generator {
               this.templatePath(els[i]),
               this.destinationPath(els[i]), {
                 projectID: this.args.projectID,
-                githubuser: this.args.githubuser,
+                gituser: this.args.gituser,
                 desc: this.args.desc,
                 email: this.args.email,
                 user: this.args.user
@@ -120,9 +120,9 @@ module.exports = class extends Generator {
 
 
         var cops = [
-            "build.sh", "install.sh",
-            "LICENSE", "MANIFEST.in", "Pipfile",
-            "test.sh", "tox.ini"
+            "build.sh", "prepare_environment.sh",
+            "LICENSE", "MANIFEST.in", 
+            "run_test.sh",
         ];
 
         for (var i in cops)
