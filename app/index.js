@@ -76,7 +76,7 @@ module.exports = class extends Generator {
                 });
         }
 
-        var fls = ["__init__.py", `${this.args.projectID}.py`]
+        var fls = [`__init__.py`, `emptyproject.py`]
         for (var i in fls)
         {
             this.fs.copyTpl(

@@ -1,6 +1,6 @@
 {
   "name": "generator-py-struct",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Yeoman generator for python project",
   "homepage": "https://github.com/cristian-rincon/py-struct.git",
   "keywords": [
