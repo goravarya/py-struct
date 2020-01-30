@@ -1,10 +1,10 @@
 # Py-struct
 
-[![Project Status](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#inactive)
+[![Project Status](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![travis](https://travis-ci.org/cristian-rincon/py-struct.svg?branch=master)](https://travis-ci.org/cristian-rincon/py-struct)
 [![appveyor](https://ci.appveyor.com/api/projects/status/6kpnkmlva9hio2hc?svg=true)](https://ci.appveyor.com/project/cristian-rincon/py-struct)
 [![codecov](https://codecov.io/gh/cristian-rincon/py-struct/branch/master/graph/badge.svg)](https://codecov.io/gh/cristian-rincon/py-struct)
-[![npm version](https://badge.fury.io/js/generator-python-bones.svg)](https://www.npmjs.com/package/generator-py-struct)
+[![npm version](https://badge.fury.io/js/generator-py-struct.svg)](https://badge.fury.io/js/generator-py-struct)
 [![npm download](https://img.shields.io/npm/dt/@cristian-rincon/py-struct.svg)](https://www.npmjs.com/package/@cristian-rincon/py-struct)
 
 
@@ -13,50 +13,44 @@
 
 `py-struct` is a yeoman-generator for `Python` projects using `setuptools`. Projects created with `py-struct` are ready for publication to `pypi` and `conda`. The generator creates a package barebone that support:
 
-* a standard `setup.py`, `MANIFEST.in`,
-* project automationg `tox`,
-* static code analysis and reports using `pylint`, `flake8`
+* a standard `setup.py`, `MANIFEST.in`.
+* project automationg `tox`.
+* static code analysis and reports using `pylint`.
 * a unit-test suite using `pytest/unittest`,
-* `build.sh`, `bld.dat` for `conda` packages,
+* `build.sh` for `conda` packages,
 * documentation with `readthedocs.io` and `sphinx`,
 * custom README.md, and VERSIONS.md files,
 * `.gitignore`, `.gitattributes`, `coveragerc`,
-* a GPL3 license.
+
 
 The resulting folder-structure looks like this:
 
 ```sh
-    .
-    ├── bld.dat
-    ├── build.sh
-    ├── coveragerc
-    ├── credentials.json
-    ├── docs
-    │   ├── Makefile
-    │   └── source
-    │       ├── conf.py
-    │       ├── examples.rst
-    │       ├── index.rst
-    │       ├── modules.rst
-    │       └── tutorial.rst
-    ├── emptyproject.py
-    ├── gitattributes
-    ├── gitignore
-    ├── __init__.py
-    ├── install.sh
-    ├── LICENSE
-    ├── MANIFEST.in
-    ├── Pipfile
-    ├── pylintrc
-    ├── README.rst
-    ├── setup.cfg
-    ├── setup.py
-    ├── test.py
-    ├── test.sh
-    ├── TODO.md
-    ├── tox.ini
-    ├── travis.yml
-    └── VERSIONS.md
+  .
+  ├── build.sh
+  ├── credentials.json
+  ├── docs
+  │   ├── Makefile
+  │   └── source
+  │       ├── conf.py
+  │       ├── examples.rst
+  │       ├── index.rst
+  │       ├── modules.rst
+  │       └── tutorial.rst
+  ├── emptyproject.py
+  ├── gitattributes
+  ├── gitignore
+  ├── __init__.py
+  ├── LICENSE
+  ├── MANIFEST.in
+  ├── prepare_environment.sh
+  ├── pylintrc
+  ├── README.rst
+  ├── run_test.sh
+  ├── setup.py
+  ├── test.py
+  ├── tree
+  └── VERSIONS.md
 
 ```
 
@@ -78,7 +72,7 @@ Once you have the package, you can create a scaffold using:
 This builds the skeleton. Afterwards modify the sources and documentation and build both using:
 
 ```sh
-  pipenv install && pipenv install --dev .
+  ./prepare_environment.sh
   cd docs && make html
 ```
 
