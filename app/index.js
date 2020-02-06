@@ -120,9 +120,9 @@ module.exports = class extends Generator {
 
 
         var cops = [
-            "build.sh", "prepare_environment.sh",
+            "prepare_environment.sh",
             "LICENSE", "MANIFEST.in", 
-            "run_test.sh",
+            "run_test.sh",".gitlab-ci.yml"
         ];
 
         for (var i in cops)
