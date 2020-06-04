@@ -1,62 +1,62 @@
 "use strict";
 
-var Generator = require("yeoman-generator");
-var chalk = require("chalk");
-var yosay = require("yosay");
-var superb = require("superb");
-var mkdirp = require("mkdirp");
-var validator = require("validator");
+const Generator = require("yeoman-generator");
+// var chalk = require("chalk");
+const yosay = require("yosay");
+const superb = require("superb");
+// var mkdirp = require("mkdirp");
+const _s = require("underscore.string");
+const _ = require("lodash");
+
+const GeneratorUtils = require("./src/GeneratorUtils");
 
 module.exports = class extends Generator {
     prompting() {
 
         this.log(yosay(
-            "¡Welcome to " + superb() + " python-struct!\n" +
+            "Welcome to " + superb() + " MarketplaceAdapter!\n" +
             "I'll walk you through the installation."
         ));
 
-        return this.prompt([{
-            type: "input",
-            name: "user",
-            message: "¿What\'s your name",
-            default: "user"
-        }, {
-            type: "input",
-            name: "email",
-            message: "¿What\'s your email adress?",
-            default: "user@noreply.com",
-            validate: function (input) {
-                return validator.isEmail(input);
-            }
-        }, {
-            type: "input",
-            name: "projectID",
-            message: "¿What\'s the name of your package?",
-            default: "emptyproject"
-        }, {
-            type: "input",
-            name: "desc",
-            message: "¿How would you describe the project in a single sentence?",
-            default: "description"
-        }, {
-            type: "input",
-            name: "gituser",
-            message: "¿What\'s your gitlab user name?",
-            default: "gituser"
-        }, {
-            type: "input",
-            name: "credentials",
-            message: "¿Where\'s your credential path?",
-            default: "credentials.json" 
+        this.config.set(this.args = {projectID: 'YahooJP'});
+        this.clientDir = `${_s.slugify(this.args.projectID)}`;
+        // return this.prompt(GeneratorUtils.getPrompts()).then((answers) => {
+        //     this.log(answers);
+        //     this.args = answers;
+        //     this.config.set(this.args);
+        //     this.clientDir = `${_s.slugify(this.args.projectID)}`;
+        //     console.log(this.answers);
+        // });
+    }
 
-        }
-        ]).then((answers) => {
-            this.args = answers;
-            this.config.set(this.args);
+    _copyClient() {
+        const clientFileName = `${this.args.projectID.toLowerCase()}_client.py`;
+        this.fs.copyTpl(
+            this.templatePath("client/client.py"),
+            this.destinationPath(`${this.clientDir}/${clientFileName}`), {
+                projectID: this.args.projectID,
+                clientDir: this.clientDir
+            });
+    }
+
+    _copyFiles(files) {
+        files.forEach((fileName) => {
+            this.fs.copy(
+                this.templatePath(fileName),
+                this.destinationPath(fileName));
         });
     }
 
     writing() {
+        this._copyFiles([
+            "requirements.txt",
+            "test-requirements.txt",
+            "buildspec.yml",
+            ".gitignore",
+            "template.yml"
+        ]);
+        this._copyClient();
+        return;
 
         this.fs.copyTpl(
             this.templatePath("docs/Makefile"),
@@ -146,6 +146,7 @@ module.exports = class extends Generator {
     }
 
     end() {
-        this.config.save();
+        //this.config.save();
+        this.log(yosay("Generated the default adapter. Enjoy!!"));
     }
 };
